@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Users";
+}
+
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Фамилия</th>
+        <th scope="col">Имя</th>
+        <th scope="col">Улица</th>
+        <th scope="col">Дом</th>
+        <th scope="col">Логин</th>
+        <th scope="col">Пароль</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var user in ViewBag.Users)
+    {
+        <tr>
+            <td>@user["surname"]</td>
+            <td>@user["name"]</td>
+            <td>@user["street"]</td>
+            <td>@user["house"]</td>
+            <td>@user["login"]</td>
+            <td>@user["password"]</td>
+        </tr>
+    }
+    <tr>
+        <form method="post">
+            <td><input type="text" name="surname"></td>
+            <td><input type="text" name="name"></td>
+            <td><input type="text" name="street"></td>
+            <td><input type="text" name="house"></td>
+            <td><input type="text" name="login"></td>
+            <td><input type="text" name="password"></td>
+            <td><input type="submit" value="Создать"></td>
+        </form>
+    </tr>
+    </tbody>
+</table>

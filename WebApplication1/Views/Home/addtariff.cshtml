@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Add tariff";
+}
+
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Название</th>
+        <th scope="col">Цена</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var user in ViewBag.Users)
+    {
+        <tr>
+            <td>@user["name"]</td>
+            <td>@user["price"]</td>
+        </tr>
+    }
+    <tr>
+        <form method="post">
+            <td><input type="text" name="name"></td>
+            <td><input type="text" name="price"></td>
+            <td><input type="submit" value="Создать"></td>
+        </form>
+    </tr>
+    </tbody>
+</table>

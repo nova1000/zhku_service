@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Consuption";
+}
+
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Название</th>
+        <th scope="col">Месяц</th>
+        <th scope="col">Количество</th>
+        <th scope="col">Цена</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var user in ViewBag.Cons)
+    {
+        <tr>
+            <td>@user["namecons"]</td>
+            <td>@user["date"]</td>
+            <td>@user["value"]</td>
+            <td>@user["price"]</td>
+        </tr>
+    }
+    </tbody>
+</table>
